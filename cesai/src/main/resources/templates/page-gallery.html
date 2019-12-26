@@ -1,0 +1,348 @@
+<!doctype html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <title>KidKid | 绘画</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <meta name="description"
+          content="Oculux Bootstrap 4x admin is super flexible, powerful, clean &amp; modern responsive admin dashboard with unlimited possibilities.">
+    <meta name="author" content="GetBootstrap, design by: puffintheme.com">
+
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <!-- VENDOR CSS -->
+    <link rel="stylesheet" href="/static/html/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/font-awesome/css/font-awesome.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/animate-css/vivify.min.css">
+    <link rel="stylesheet" href="/static/assets/vendor/light-gallery/css/lightgallery.css">
+    <link rel="stylesheet" href="/static/assets/vendor/themify-icons/themify-icons.css">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="/static/html/assets/css/site.min.css">
+
+</head>
+<body class="theme-cyan font-montserrat light_version">
+
+<!-- Page Loader -->
+<div class="page-loader-wrapper">
+    <div class="loader">
+        <div class="bar1"></div>
+        <div class="bar2"></div>
+        <div class="bar3"></div>
+        <div class="bar4"></div>
+        <div class="bar5"></div>
+    </div>
+</div>
+
+<!-- 右侧栏 -->
+<div class="themesetting">
+    <a href="javascript:void(0);" class="theme_btn"><i class="icon-magic-wand"></i></a>
+    <div class="card theme_color">
+        <div class="header">
+            <h2>主题颜色</h2>
+        </div>
+        <ul class="choose-skin list-unstyled mb-0">
+            <li data-theme="green">
+                <div class="green"></div>
+            </li>
+            <li data-theme="orange">
+                <div class="orange"></div>
+            </li>
+            <li data-theme="blush">
+                <div class="blush"></div>
+            </li>
+            <li data-theme="cyan" class="active">
+                <div class="cyan"></div>
+            </li>
+            <li data-theme="indigo">
+                <div class="indigo"></div>
+            </li>
+            <li data-theme="red">
+                <div class="red"></div>
+            </li>
+        </ul>
+    </div>
+    <div class="card font_setting">
+        <div class="header">
+            <h2>字体设置</h2>
+        </div>
+        <div>
+            <div class="fancy-radio mb-2">
+                <label><input name="font" value="font-krub" type="radio"><span><i></i>Krub Google 字体</span></label>
+            </div>
+            <div class="fancy-radio mb-2">
+                <label><input name="font" value="font-montserrat" type="radio" checked><span><i></i>Montserrat Google 字体</span></label>
+            </div>
+            <div class="fancy-radio">
+                <label><input name="font" value="font-roboto" type="radio"><span><i></i>Robot Google 字体</span></label>
+            </div>
+        </div>
+    </div>
+    <div class="card setting_switch">
+        <div class="header">
+            <h2>Settings</h2>
+        </div>
+        <ul class="list-group">
+            <li class="list-group-item">
+                白色模式
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="lv-btn" checked>
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                左右翻转
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="rtl-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                水平菜单
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="hmenu-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+            <li class="list-group-item">
+                迷你菜单
+                <div class="float-right">
+                    <label class="switch">
+                        <input type="checkbox" class="mini-sidebar-btn">
+                        <span class="slider round"></span>
+                    </label>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>
+<!--	右侧栏-->
+
+<!-- Overlay For Sidebars -->
+<div class="overlay"></div>
+
+<div id="wrapper">
+
+    <!--	顶部导航栏-->
+    <nav class="navbar top-navbar">
+        <div class="container-fluid">
+
+            <div class="navbar-left">
+                <div class="navbar-btn">
+                    <a href="page-profile"><img src="/static/assets/images/icon.svg" alt="Oculux Logo"
+                                                class="img-fluid logo"></a>
+                    <button type="button" class="btn-toggle-offcanvas"><i class="lnr lnr-menu fa fa-bars"></i></button>
+                </div>
+                <ul class="nav navbar-nav">
+                    <div style="margin-top: 10px">
+                        <h4><span style="color: rgb(66, 66, 66);margin-left: 20px;">后台管理系统</span></h4>
+                    </div>
+
+                </ul>
+
+            </div>
+
+            <div class="navbar-right">
+                <div id="navbar-menu">
+                    <ul class="nav navbar-nav">
+
+
+                        <li><a href="page-login" class="icon-menu"><i class="icon-power"></i></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="progress-container">
+            <div class="progress-bar" id="myBar"></div>
+        </div>
+    </nav>
+    <!--	顶部导航栏-->
+
+
+    <!--侧边栏-->
+    <div id="left-sidebar" class="sidebar">
+        <div class="navbar-brand">
+            <a href="page-profile"><img src="/static/assets/images/icon.svg" alt="Oculux Logo"
+                                        class="img-fluid logo"><span href="page-profile">KidKid</span></a>
+            <button type="button" class="btn-toggle-offcanvas btn btn-sm float-right"><i
+                    class="lnr lnr-menu icon-close"></i></button>
+        </div>
+        <div class="sidebar-scroll">
+            <div class="user-account">
+                <div class="user_div">
+                    <img src="/static/assets/images/user.png" class="user-photo" alt="User Profile Picture">
+                </div>
+                <div class="dropdown">
+                    <span>欢迎,管理员</span>
+                    <a href="javascript:void(0);" class="dropdown-toggle user-name" data-toggle="dropdown"><strong
+                            th:text="${loginManager.managerName}">Default ManagerName</strong></a>
+                    <ul class="dropdown-menu dropdown-menu-right account vivify flipInY">
+                        <li><a href="page-profile"><i class="icon-user"></i>个人主页</a></li>
+                        <li class="divider"></li>
+                        <li><a href="page-login"><i class="icon-power"></i>注销</a></li>
+                    </ul>
+                </div>
+            </div>
+            <nav id="left-sidebar-nav" class="sidebar-nav">
+                <ul id="main-menu" class="metismenu">
+                    <li class="header">主菜单</li>
+                    <li>
+                        <a href="page-profile"><i class="icon-home"></i><span>个人主页</span></a>
+
+                    </li>
+
+                    <li class="header">后台管理</li>
+                    <li><a href="user-list"><i class="icon-users"></i><span>用户列表</span></a></li>
+                    <li><a href="admin-list"><i class="icon-user"></i><span>管理员列表</span></a></li>
+                    <li>
+                        <a class="has-arrow"><i class="icon-book-open"></i><span>童话故事</span></a>
+                        <ul>
+                            <li class="active open"><a href="story-list">童话列表</a></li>
+                            <li><a href="add-story">添加童话</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="page-gallery"><i class="icon-picture"></i><span>绘画</span></a></li>
+                    <li><a href="recording-list"><i class=" icon-microphone"></i><span>配音</span></a></li>
+                    <li><a href="song-list"><i class=" icon-music-tone"></i><span>儿歌</span></a></li>
+                    <li><a href="cartoon-list"><i class=" ti-video-clapper"></i><span>动画</span></a></li>
+                    <li><a href="collection-list"><i class=" ti-files"></i><span>合辑</span></a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <!--	侧边栏-->
+
+    <div id="main-content">
+        <div class="container-fluid">
+            <div class="block-header">
+                <div class="row clearfix">
+                    <div class="col-md-6 col-sm-12">
+                        <h2>绘画列表</h2>
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                                <li class="breadcrumb-item"><a href="page-profile">首页</a></li>
+
+                                <li class="breadcrumb-item active" aria-current="page">绘画</li>
+                            </ol>
+                        </nav>
+                    </div>
+
+                </div>
+            </div>
+            <div id="lightgallery" class="row clearfix lightGallery">
+                <div class="col-lg-3 col-md-6 m-b-30" th:each="drawing,rowStat:${drawings}"><a class="light-link"
+                                                                                               th:href="${drawing.drawingImageUrl}"><img
+                        class="img-fluid rounded" th:src="${drawing.drawingImageUrl}" alt=""></a>
+                    <hr>
+                    <a>用户ID：</a>
+                    <h7 th:text="${drawing.userId}">Default userId</h7>
+                    <!--
+                                        <a th:href="@{'/deleteDrawing/'+${drawing.drawingId}}"><i class="icon-close" title="删除" style="color: #FF0044;margin-left: 5px"></i></a>
+                    -->
+                    <a>
+                        <button type="button" class="btn btn-sm btn-default js-sweetalert"
+                                title="删除" data-type="confirm" data-toggle="modal"
+                                th:data-target="'#b'+${drawing.drawingId}"><i
+                                class="fa fa-trash-o text-danger"></i></button>
+                    </a>
+                    <!-- 确认删除表单 -->
+                    <div class="modal fade" th:id="'b'+${drawing.drawingId}" tabindex="-1"
+                         role="dialog" aria-labelledby="exampleModalCenterTitle"
+                         aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="exampleModalCenterTitle1">
+                                        确认删除框</h5>
+                                    <button type="button" class="close" data-dismiss="modal"
+                                            aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <form id="basic-form1" th:action="@{'/deleteDrawing/'+${drawing.drawingId}}">
+                                    <p></p>
+                                    <p style="text-indent:2em">确认要删除编号为：<a th:text="${drawing.drawingId}"></a> 的图画吗？</p>
+                                    <p></p>
+                                    <p></p>
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-round btn-default"
+                                                data-dismiss="modal">取消
+                                        </button>
+                                        <button type="submit" class="btn btn-round btn-primary">
+                                            确认
+                                        </button>
+                                    </div>
+                                </form>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- 确认删除表单 -->
+                    <a th:text="${#dates.format(drawing.createTime,'yyyy-MM-dd HH:mm:SS')}">Default
+                        Create DateTime</a>
+                </div>
+                <div class="btn-group btn-group" style="margin-top: 20px; margin-left: 45%" >
+                    <a th:href="@{/selectPreviousDrawingGroup}"><button type="button" class="btn btn-info">上一组</button></a>
+                    <a th:href="@{/selectNextDrawingGroup}"><button type="button" class="btn btn-outline-info">下一组</button></a>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+</div>
+
+<!-- Javascript -->
+<script>
+    function Toast(msg,duration){
+        duration=isNaN(duration)?3000:duration;
+        var m = document.createElement('div');
+        m.innerHTML = msg;
+        m.style.cssText="max-width:60%;min-width: 150px;padding:0 14px;height: 40px;color: rgb(255, 255, 255);line-height: 40px;text-align: center;border-radius: 4px;position: fixed;top: 50%;left: 50%;transform: translate(-50%, -50%);z-index: 999999;background: rgba(0, 0, 0,.7);font-size: 16px;";
+        document.body.appendChild(m);
+        setTimeout(function() {
+            var d = 0.5;
+            m.style.webkitTransition = '-webkit-transform ' + d + 's ease-in, opacity ' + d + 's ease-in';
+            m.style.opacity = '0';
+            setTimeout(function() { document.body.removeChild(m) }, d * 1000);
+        }, duration);
+    }
+
+    function getQueryVariable(variable) {
+        var query = window.location.search.substring(1);
+        var vars = query.split("&")
+        for (var i = 0; i < vars.length; i++) {
+            var pair = vars[i].split("=");
+            if (pair[0] == variable) {
+                return pair[1];
+            }
+        }
+        return (false);
+    }
+
+    var i = getQueryVariable("i");
+    if (i == "1012") {
+        Toast("删除图画成功",2000);
+    } else {
+
+    }
+</script>
+<script src="/static/html/assets/bundles/libscripts.bundle.js"></script>
+<script src="/static/html/assets/bundles/vendorscripts.bundle.js"></script>
+
+<script src="/static/html/assets/bundles/lightgallery.bundle.js"></script><!-- Light Gallery Plugin Js -->
+
+<script src="/static/html/assets/bundles/mainscripts.bundle.js"></script>
+<script src="/static/html/assets/js/pages/medias/image-gallery.js"></script>
+</body>
+</html>

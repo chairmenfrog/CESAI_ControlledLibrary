@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<html xmlns:th="http://www.thymeleaf.org">
+
+<head>
+    <link rel="icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <title>已退出登录</title>
+</head>
+<body>
+<p>您已退出，请重新登录，3秒后会自动跳转到登录页面</p>
+<a href="page-login">若无自动跳转，请点击此处</a>
+</body>
+
+<script language="javascript" type="text/javascript">
+    // 以下方式定时跳转
+    setTimeout("javascript:location.href='page-login'", 3000);
+</script>
+</html>
